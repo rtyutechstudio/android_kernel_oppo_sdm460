@@ -1532,7 +1532,7 @@ void oplus_vooc_reset_variables(void)
 	return;
 }
 
-BattMngr_err_code_e oplus_vooc_handle_ask_fastchg_ornot_cmd()
+BattMngr_err_code_e oplus_vooc_handle_ask_fastchg_ornot_cmd(void)
 {
 	BattMngr_err_code_e status = BATTMNGR_SUCCESS;
 
@@ -1591,7 +1591,7 @@ BattMngr_err_code_e oplus_vooc_handle_ask_fastchg_ornot_cmd()
 
 
 
-BattMngr_err_code_e oplus_vooc_calcucate_identification_code()
+BattMngr_err_code_e oplus_vooc_calcucate_identification_code(void)
 {
 	BattMngr_err_code_e status = BATTMNGR_SUCCESS;
 	UINT8 code_id_temp_l = 0, code_id_temp_h = 0;
@@ -1629,7 +1629,7 @@ BattMngr_err_code_e oplus_vooc_calcucate_identification_code()
 }
 
 
-BattMngr_err_code_e oplus_vooc_handle_identification_cmd()
+BattMngr_err_code_e oplus_vooc_handle_identification_cmd(void)
 {
 	BattMngr_err_code_e status = BATTMNGR_SUCCESS;
 
@@ -1653,7 +1653,7 @@ BattMngr_err_code_e oplus_vooc_handle_identification_cmd()
 
 
 
-BattMngr_err_code_e oplus_vooc_handle_adapter_check_commu_process_cmd()
+BattMngr_err_code_e oplus_vooc_handle_adapter_check_commu_process_cmd(void)
 {
 	BattMngr_err_code_e status = BATTMNGR_SUCCESS;
 
