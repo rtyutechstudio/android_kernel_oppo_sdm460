@@ -293,6 +293,7 @@ module_init(rt_info_init);
 module_exit(rt_info_exit);
 
 MODULE_DESCRIPTION("RT info for game optimization");
-MODULE_LICENSE("GPL v2");
 MODULE_AUTHOR("JiangFei@GameOpt");
 #endif
+
+MODULE_LICENSE("GPL v2");
