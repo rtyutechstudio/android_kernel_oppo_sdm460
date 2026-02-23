@@ -1010,7 +1010,10 @@ genrule {
 
 genrule {
     name: "qti_generate_kernel_headers_arm64",
-    tools: ["headers_install.sh"],
+    tools: [
+        "headers_install.sh",
+        "unifdef",
+    ],
     tool_files: [
         "kernel_headers.py",
     ],
