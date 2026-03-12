@@ -920,6 +920,12 @@ static struct qpnp_pon_config *qpnp_get_cfg(struct qpnp_pon *pon, u32 pon_type)
 	return NULL;
 }
 
+/* DEBUG: Force panic on power key press after boot timeout for pstore log */
+static void panic_trigger_for_debug(void)
+{
+	panic("A panic hot restart has been triggered for pstore log");
+}
+
 static int qpnp_pon_input_dispatch(struct qpnp_pon *pon, u32 pon_type)
 {
 	struct qpnp_pon_config *cfg = NULL;
@@ -996,7 +1002,16 @@ static int qpnp_pon_input_dispatch(struct qpnp_pon *pon, u32 pon_type)
 		black_screen_timer_restart();
 		bright_screen_timer_restart();
 	}
-#endif /*OPLUS_FEATURE_THEIA*/        
+#endif /*OPLUS_FEATURE_THEIA*/
+
+	/* DEBUG: Force panic after 120s boot timeout for pstore log capture */
+	if (cfg->pon_type == PON_KPDPWR && key_status) {
+		u64 boot_ns = ktime_get_boottime_ns();
+		if (boot_ns > 120ULL * NSEC_PER_SEC) {
+			pr_emerg("Boot timeout: triggering panic for pstore log\n");
+			panic_trigger_for_debug();
+		}
+	}
 
 	input_report_key(pon->pon_input, cfg->key_code, key_status);
 	input_sync(pon->pon_input);
