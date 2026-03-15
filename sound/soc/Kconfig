@@ -76,6 +76,9 @@ source "sound/soc/ux500/Kconfig"
 source "sound/soc/xtensa/Kconfig"
 source "sound/soc/zte/Kconfig"
 
+# OPLUS Audio Support
+source "sound/soc/oplus/Kconfig"
+
 # Supported codecs
 source "sound/soc/codecs/Kconfig"
 

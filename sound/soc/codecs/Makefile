@@ -521,3 +521,5 @@ obj-$(CONFIG_SND_SOC_AW87XXX)	+= aw87xxx/
 obj-$(CONFIG_SND_SOC_AK4376)	+= ak4376/
 obj-$(CONFIG_SND_SOC_SMARTPA_PM)	+= smartpa_pm/
 obj-$(CONFIG_SND_SOC_TFA98XX_V6)	+= tfa98xx-v6/
+obj-$(CONFIG_SND_SOC_SIA81XX)	+= sia81xx/
+obj-$(CONFIG_SND_SOC_MAX98937)	+= max98937/

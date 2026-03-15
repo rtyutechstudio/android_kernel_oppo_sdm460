@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS Audio Support
+
+config SND_SOC_OPLUS_AUDIO_EXTEND
+	tristate "OPLUS Audio Extension Driver"
+	help
+	  OPLUS audio extension driver for enhanced audio features.

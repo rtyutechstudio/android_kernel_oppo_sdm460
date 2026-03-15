@@ -1326,4 +1326,12 @@ config SND_SOC_SMARTPA_PM
 config SND_SOC_TFA98XX_V6
 	tristate "NXP TFA98XX V6 Smart PA"
 
+config SND_SOC_SIA81XX
+	tristate "SIA81XX Smart Amplifier"
+	depends on I2C
+
+config SND_SOC_MAX98937
+	tristate "Maxim MAX98937 Smart Amplifier"
+	depends on I2C
+
 endmenu
