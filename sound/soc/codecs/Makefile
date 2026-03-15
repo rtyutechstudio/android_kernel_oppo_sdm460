@@ -515,3 +515,9 @@ obj-$(CONFIG_SND_SOC_MAX9877)	+= snd-soc-max9877.o
 obj-$(CONFIG_SND_SOC_MAX98504)	+= snd-soc-max98504.o
 obj-$(CONFIG_SND_SOC_SIMPLE_AMPLIFIER)	+= snd-soc-simple-amplifier.o
 obj-$(CONFIG_SND_SOC_TPA6130A2)	+= snd-soc-tpa6130a2.o
+
+# OPLUS Audio Codecs
+obj-$(CONFIG_SND_SOC_AW87XXX)	+= aw87xxx/
+obj-$(CONFIG_SND_SOC_AK4376)	+= ak4376/
+obj-$(CONFIG_SND_SOC_SMARTPA_PM)	+= smartpa_pm/
+obj-$(CONFIG_SND_SOC_TFA98XX_V6)	+= tfa98xx-v6/

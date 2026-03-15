@@ -1311,4 +1311,19 @@ config SND_SOC_TPA6130A2
 	tristate "Texas Instruments TPA6130A2 headphone amplifier"
 	depends on I2C
 
+# OPLUS Audio Codecs
+config SND_SOC_AW87XXX
+	tristate "AW87XXX Smart PA"
+	depends on I2C
+
+config SND_SOC_AK4376
+	tristate "AKM AK4376 DAC"
+	depends on I2C
+
+config SND_SOC_SMARTPA_PM
+	tristate "Smart PA Power Management"
+
+config SND_SOC_TFA98XX_V6
+	tristate "NXP TFA98XX V6 Smart PA"
+
 endmenu
