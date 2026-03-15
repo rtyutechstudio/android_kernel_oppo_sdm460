@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS Power Management Drivers
+
+menu "OPLUS Power Management"
+
+source "drivers/power/oplus_power/cpufreq_effiency/Kconfig"
+source "drivers/power/oplus_power/cpufreq_health/Kconfig"
+source "drivers/power/oplus_power/midas/Kconfig"
+source "drivers/power/oplus_power/power_diag/Kconfig"
+
+endmenu

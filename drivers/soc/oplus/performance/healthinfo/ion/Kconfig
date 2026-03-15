@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS Healthinfo ION
+
+config OPLUS_FEATURE_ION_HEALTHINFO
+	bool "OPLUS ION Healthinfo"
+	default n
+	help
+	  OPLUS ION memory health information tracking

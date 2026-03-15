@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS Memleak Detect Drivers
+
+source "drivers/soc/oplus/performance/memleak_detect/svelte/Kconfig"
+source "drivers/soc/oplus/performance/memleak_detect/task_mem/Kconfig"
+source "drivers/soc/oplus/performance/memleak_detect/oppo_svelte/Kconfig"
+source "drivers/soc/oplus/performance/memleak_detect/malloc_track/Kconfig"

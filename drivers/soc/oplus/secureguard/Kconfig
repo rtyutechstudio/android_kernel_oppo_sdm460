@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS Security Drivers
+
+menu "OPLUS Security"
+
+source "drivers/soc/oplus/secureguard/keventupload/Kconfig"
+source "drivers/soc/oplus/secureguard/rootguard/Kconfig"
+
+endmenu

@@ -66,3 +66,6 @@ source "drivers/power/oplus/Kconfig"
 #/* add for wakelock profiler */
 source "drivers/power/oplus_util/Kconfig"
 #endif /* OPLUS_FEATURE_POWERINFO_STANDBY */
+
+# OPLUS Power Management
+source "drivers/power/oplus_power/Kconfig"

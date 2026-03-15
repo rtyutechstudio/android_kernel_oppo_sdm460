@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS Root Guard
+
+config OPLUS_ROOT_GUARD
+	bool "OPLUS Root Guard Support"
+	default y
+	help
+	  OPLUS root protection and security monitoring feature

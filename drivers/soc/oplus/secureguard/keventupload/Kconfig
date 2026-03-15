@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS Kevent Upload
+
+config OPLUS_KEVENT_UPLOAD
+	bool "OPLUS Kevent Upload Support"
+	default y
+	help
+	  OPLUS kernel event upload feature for security monitoring

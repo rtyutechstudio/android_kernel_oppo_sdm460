@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS MM Drivers
+
+source "drivers/soc/oplus/performance/oplus_mm/zram_opt/Kconfig"
+source "drivers/soc/oplus/performance/oplus_mm/process_reclaim/Kconfig"

@@ -12,6 +12,7 @@
  * Copyright (c) 2009     Shrikar Archak
  * Copyright (c) 2003-2011 Stony Brook University
  * Copyright (c) 2003-2011 The Research Foundation of SUNY
+ * Copyright (C) 2020 Oplus. All rights reserved.
  *
  * This file is dual licensed.  It may be redistributed and/or modified
  * under the terms of the Apache 2.0 License OR version 2 of the GNU
@@ -165,7 +166,7 @@ int parse_options_remount(struct super_block *sb, char *options, int silent,
 	char *p;
 	substring_t args[MAX_OPT_ARGS];
 	int option;
-	int debug;
+	int debug = 0;
 
 	if (!options)
 		return 0;

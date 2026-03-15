@@ -419,6 +419,10 @@ endif # DRM_LEGACY
 config DRM_PANEL_ORIENTATION_QUIRKS
 	tristate
 
+# OPLUS Color Control
+source "drivers/gpu/drm/colorctrl/colorctrl/Kconfig"
+source "drivers/gpu/drm/colorctrl/colorctrl_v2/Kconfig"
+
 config DRM_LIB_RANDOM
 	bool
 	default n

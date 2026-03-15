@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-2.0
+# OPLUS Color Control Drivers
+
+menu "OPLUS Color Control"
+
+source "drivers/gpu/drm/colorctrl/colorctrl/Kconfig"
+source "drivers/gpu/drm/colorctrl/colorctrl_v2/Kconfig"
+
+endmenu

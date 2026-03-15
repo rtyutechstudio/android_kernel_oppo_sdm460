@@ -664,6 +664,10 @@ source "drivers/misc/cxl/Kconfig"
 source "drivers/misc/ocxl/Kconfig"
 source "drivers/misc/cardreader/Kconfig"
 source "drivers/misc/fpr_FingerprintCard/Kconfig"
+
+# OPLUS GPIO Driver
+source "drivers/misc/oplus_gpio/Kconfig"
+
 endmenu
 
 config OKL4_USER_VIPC
