@@ -562,6 +562,29 @@ static void msm_restart_prepare(const char *cmd)
 		return;
 	}
 #endif /* OPLUS_BUG_STABILITY */
+	/*
+	 * Force reboot to recovery for early boot log capture
+	 * This allows capturing pstore/ramoops logs when system
+	 * crashes before init can start (e.g., first screen reboot)
+	 */
+	if (true) {
+		/* Force warm reset to preserve memory for ramoops */
+		qpnp_pon_system_pwr_off(PON_POWER_OFF_WARM_RESET);
+
+		/* Set restart reason to recovery */
+		qpnp_pon_set_restart_reason(PON_RESTART_REASON_RECOVERY);
+		__raw_writel(0x77665502, restart_reason);
+
+		/* Flush cache to ensure logs are written to ramoops */
+		flush_cache_all();
+
+		/* outer_flush_all is not supported by 64bit kernel */
+#ifndef CONFIG_ARM64
+		outer_flush_all();
+#endif
+		return;
+	}
+
 	if (force_warm_reboot)
 		pr_info("Forcing a warm reset of the system\n");
 
