@@ -185,6 +185,12 @@ endif
 ifdef CONFIG_SND_SOC_WCD_IRQ
 	CORE_OBJS += wcd-irq.o
 endif
+ifdef CONFIG_SND_SOC_AW87529
+	AW87529_OBJS += aw87529.o
+endif
+ifdef CONFIG_SND_SOC_AW87359
+	AW87359_OBJS += aw87359.o
+endif
 
 ##ifdef OPLUS_ARCH_EXTENDS
 ifdef CONFIG_SND_SOC_AW87359_SPK
@@ -272,6 +278,12 @@ mbhc_dlkm-y := $(MBHC_OBJS)
 
 obj-$(CONFIG_SND_SOC_MSM_HDMI_CODEC_RX) += hdmi_dlkm.o
 hdmi_dlkm-y := $(HDMICODEC_OBJS)
+
+obj-$(CONFIG_SND_SOC_AW87529) += aw87529_dlkm.o
+aw87529_dlkm-y := $(AW87529_OBJS)
+
+obj-$(CONFIG_SND_SOC_AW87359) += aw87359_dlkm.o
+aw87359_dlkm-y := $(AW87359_OBJS)
 
 # inject some build related information
 DEFINES += -DBUILD_TIMESTAMP=\"$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')\"
